@@ -100,15 +100,5 @@
             bindings = <&bootloader>;
             key-positions = <62 41 59>;
         };
-
-        to_0 {
-            bindings = <&to 0>;
-            key-positions = <62 39>;
-        };
-
-        to_3 {
-            bindings = <&to 3>;
-            key-positions = <62 40>;
-        };
     };
 };
