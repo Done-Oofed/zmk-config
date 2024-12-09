@@ -59,11 +59,11 @@
             // ------------------------------------------------------------------------------------------------
 
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR  &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans
-&trans  &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans                      &sys_reset
-&trans                &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans
-&trans  &trans                      &trans                              &trans                          &trans  &trans  &trans              &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &bt BT_CLR  &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans              &trans
+&trans  &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans       &trans                      &sys_reset
+&trans                &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans              &trans
+&trans  &trans                      &trans                              &trans                          &bootloader  &trans  &trans              &trans
             >;
         };
 
@@ -81,10 +81,14 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_bt {
-            timeout-ms = <50>;
-            key-positions = <61 62>;
+        bt_layer {
             bindings = <&mo 2>;
+            key-positions = <62 41>;
+        };
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <62 41 59>;
         };
     };
 };
