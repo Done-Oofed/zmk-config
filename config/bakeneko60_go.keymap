@@ -90,5 +90,10 @@
             bindings = <&bootloader>;
             key-positions = <62 41 59>;
         };
+
+        layer_1_toggle {
+            bindings = <&tog 1>;
+            key-positions = <62 41>;
+        };
     };
 };
